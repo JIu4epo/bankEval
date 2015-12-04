@@ -1,0 +1,388 @@
+﻿
+<div class="regularText">
+    Щоб зробити оцінку ризику банкрутства кількісно і якісно, необхідно провести 
+    агрегування даних, зібраних в рамках деревовидної ієрархії; при цьому агрегування 
+    відбувається за напрямом дуг графа ієрархії.
+</div>
+<div class="regularText">
+    Сформуємо лінгвістичну змінну «<b>Рівень фактора</b>» з терм-множиною значень L виду
+</div> 
+<div class="right">
+    <span>
+        (1.1)
+    </span>
+</div>
+<div class="formula">
+    L = {Дуже Низький рівень (ДН), Низький рівень (Н), Середній рівень (С), Високий рівень 
+    (В), Дуже Високий рівень (ДВ)}. 
+</div>
+<div class="regularText">
+    Тоді в якості сімейства функцій належності може виступати стандартний п'ятирівневий 
+    01-класифікатор, де функції належності - трапецієподібні трикутні числа:</div>
+<div class="right">
+    <span>
+        (1.2)
+    </span>
+</div>
+<div class="formula">
+    <span class="formulaCentr">
+        ДН:  
+        <img src="img/method/formula1.2.png">.
+    </span>
+</div>
+<div class="right">
+    <span>
+        (1.3)
+    </span>
+</div>
+<div class="formula">
+    <span class="formulaCentr">
+        Н:  
+        <img src="img/method/formula1.3.png">.	
+    </span>
+</div>
+<div class="right">
+    <span>
+        (1.4)
+    </span>
+</div>
+<div class="formula">
+    <span class="formulaCentr">
+        С:  
+        <img src="img/method/formula1.4.png">.	
+    </span>
+</div>
+<div class="right">
+    <span>
+        (1.5)
+    </span>
+</div>
+<div class="formula">
+    <span class="formulaCentr">
+        В:  
+        <img src="img/method/formula1.5.png">.	
+    </span>
+</div>
+<div class="right">
+    <span >
+        (1.6)
+    </span>
+</div>
+<div class="formula">
+    <span class="formulaCentr">
+        ДВ:  
+        <img src="img/method/formula1.6.png">.
+    </span>
+</div>
+<div class="regularText">
+    Скрізь в (1.2) – (1.6) x належить відрізку [0,1].
+</div>
+<div class = "pictures">
+	<img src="img/method/pic.1.png">
+</div>
+<p class="pictureText">
+    Рис. 1. Система трапецієподібних функцій належності на 01-носії
+</p>
+<div class="regularText">
+    Стандартний класифікатор здійснює проекцію нечіткого лінгвістичного опису 
+    на 01-носій, при цьому робить це несуперечливим способом, симетрично 
+    розташовуючи вузли класифікації (0.1, 0.3, 0.5, 0.7, 0.9). У цих вузлах 
+    значення відповідної функції належності дорівнює одиниці, а всіх інших 
+    функцій - нулю. Невпевненість експерта в класифікації убуває (зростає) 
+    лінійно видаленням від вузла (з наближенням до вузлу, відповідно); при 
+    цьому сума функцій належності в усіх точках носія дорівнює одиниці.
+</div>
+<div class="regularText">
+    Тепер розглянемо порядок побудови схеми ваг Фішберна для окремих факторів. 
+    Системі зменшення переваги N альтернатив найкращим чином відповідає система 
+    знижаючихся за правилом арифметичної прогресії вагів
+</div>
+<div class="right">
+    <span>
+        (1.7)
+    </span>
+</div>
+<div class="formula">
+    <span class="formulaCentr">
+        <img src="img/method/formula1.7.png">
+    </span>
+</div>				
+<div class="regularText">
+    а системі байдужих один одному N альтернатив - набір рівних вагів
+</div>
+<div class="right">
+    <span>
+        (1.8)
+    </span>
+</div>
+<div class="formula">
+    <span class="formulaCentr">
+        <img src="img/method/formula1.8.png">
+    </span>
+</div>	
+<div class="regularText">
+    З (1.7) видно, що ваги Фішберна - це раціональні дроби, в знаменнику яких 
+    стоїть сума арифметичної прогресії N членів перших членів натурального ряду 
+    з кроком 1, а в чисельнику - убуваючі на 1 елементи натурального ряду, від 
+    N до 1 (наприклад, 3/6, 2/6, 1/6, в сумі одиниця). Тобто перевага по 
+    Фішберну виражається в убуванні на одиницю чисельника раціональної дробу 
+    вагового коефіцієнта більш слабкою альтернативи.
+</div>
+<div class="regularText">
+    Щоб визначити набір вагів Фішберна для змішаної системи переваг, коли, 
+    разом з перевагами, в систему входять відносини байдужості, необхідно 
+    визначати чисельнки ri раціональних дробів за рекурсивною схемою:
+</div>
+<div class="right">
+    <span>
+        (1.9)
+    </span>
+</div>
+<div class="formula">
+    <span class="formulaCentr">
+        <img src="img/method/formula1.9.png">
+    </span>
+</div>	
+<div class="regularText">
+    Тоді сума отриманих числівників і є спільний знаменник дробів Фішберна:
+</div>
+<div class="right">
+    <span>
+        (1.10)
+    </span>
+</div>
+<div class="formula">
+    <span class="formulaCentr">
+        <img src="img/method/formula1.10.png">
+    </span>
+</div>	
+і
+<div class="right">
+    <span>
+        (1.11)
+    </span>
+</div>
+<div class="formula">
+    <span class="formulaCentr">
+        <img src="img/method/formula1.11.png">
+    </span>
+</div>
+<div class="regularText">
+    Можна легко переконатися, що від співвідношень (1.9) - (1.11) можна легко 
+    перейти до часних випадків (1.7) і (1.8). Дійсно, якщо в систему входять 
+    тільки відносини переваги, то виконується,
+</div>
+<div class="right">
+    <span>
+        (1.12)
+    </span>
+</div>
+<div class="formula">
+    <span class="formulaCentr">
+        <img src="img/method/formula1.12.png">
+    </span>
+</div>	
+<div class="regularText">
+    що одночасно відповідає (1.7) і (1.11). В іншому випадку, якщо в систему 
+    входять лише відносини байдужості, то
+</div>
+<div class="right">
+    <span>
+        (1.13)
+    </span>
+</div>
+<div class="formula">
+    <span class="formulaCentr">
+        <img src="img/method/formula1.13.png">
+    </span>
+</div>	
+<div class="regularText">
+    що одночасно відповідає (1.8) і (1.11).
+</div>
+<div class="regularText">
+    Таким чином, запропонована тут система вагів Фішберна для змішаних систем 
+    переваг є несуперечливою і узагальнює часні випадки відомих систем (1.7) і 
+    (1.8). Для ілюстрації в таблицю 2 зведені дроби Фішберна для всіх змішаних 
+    систем відносин переваги при N = 2..4.
+</div>
+<p class="right">
+    <span>
+        Таблиця 1.
+    </span>
+</p>
+<div class = "pictures">
+	<img src="img/method/table1.png" width="597px">
+</div>
+<p class="pictureText">
+    Система ваг Фішберна (N = 2..4)
+</p>
+<div class="regularText">
+    Всього варіантів систем переваг 2^(N-1)  для кожного числа N зіставлених альтернатив.
+</div>
+<div class="regularText">І нарешті, коли по кожному показнику (F*.1… F*.N) 
+    на вибраному підрівні (*) ієрархії G відомі лінгвістичні оцінки L = 
+    (L*.1 … L*.N), а також визначена система ваг Фішберна P = (p*.1 … p*.N) 
+    на основі системи переваг Ф виду (3.3), тоді показник підрівня F* 
+    характеризується своєю лінгвістичної оцінкою, визначеною функцією належності 
+    на 01-носії x:
+</div>
+<div class="right">
+    <span>
+        (1.14)
+    </span>
+</div>
+<div class="formula">
+    <span class="formulaCentr">
+        <img src="img/method/formula1.14.png">
+    </span>
+</div>	
+де 
+<div class="right">
+    <span>
+        (1.15)
+    </span>
+</div>
+<div class="formula">
+    <span class="formulaCentr">
+        <img src="img/method/formula1.15.png">.
+    </span>
+</div>
+
+<div class="regularText">Якщо позначити трапецевидне число (1.15) як (a1, a2, 
+    a3, a4), де ai відповідають абсцисам вершин трапеції, то виконується:
+</div>
+<div class="right">
+    <span>
+        (1.16)
+    </span>
+</div>
+<div class="formula">
+    <span class="formulaCentr">
+        <img src="img/method/formula1.16.png">
+    </span>
+</div>	
+<div class="regularText">Отриману функцію виду (1.14) необхідно лінгвістично 
+    розпізнати, щоб виробити судження про якісний рівень показника F*. Для 
+    цього необхідно співвіднести отриману функцію 
+    <img src="img/method/extra1.png"> і функції 
+    <img src="img/method/extra1.png"> вигляду (1.2-1.6). Якщо
+</div>
+<div class="right">
+    <span>
+        (1.17)
+    </span>
+</div>
+<div class="formula">
+        <span class="formulaCentr">
+            <img src="img/method/formula1.17.png">
+        </span>
+    </div>	
+<div class="regularText">то рівень показника F* однозначно не розпізнається 
+    як рівень, якому відповідає i-та «еталонна» функція належності. 
+    Стовідсоткове розпізнавання настає, якщо виконується
+</div>
+<div class="right">
+    <span>
+        (1.18)
+    </span>
+</div>
+<div class="formula">
+    <span class="formulaCentr">
+        <img src="img/method/formula1.18.png">
+    </span>
+</div>	
+<div class="regularText">У всіх проміжних випадках необхідно задатися мірою 
+    розпізнавання рівня. Такою мірою може бути різновид норми Хеммінга 
+    <img src="img/method/extra3.png">. Нехай дано два трапецієподібних числа 
+    (a1, a2, a3, a4) і (b1, b2, b3, b4) на 01-носії. Тоді ступінь подібності 
+    <img src="img/method/extra3.png"> двох таких чисел може бути визначена як
+</div>
+<div class="right">
+    <span>
+        (1.19)
+    </span>
+</div>	
+<div class="formula">
+    <span class="formulaCentr">
+        <img src="img/method/formula1.19.png">
+    </span>
+</div>
+<div class="regularText">Ми провели агрегування показників низового рівня 
+    ієрархії G і розпізнавання агрегованого фактора за шкалою L виду (1.1). 
+    Пройшовши послідовно знизу вгору по всіх рівнях ієрархії G і застосовуючи 
+    співвідношення (1.14) - (1.19), в результаті отримуємо функцію належності 
+    фактора F0 і лінгвістичну інтерпретацію рівня цього фактора, яка 
+    супроводжується ступенем подібності виду (1.19).
+</div>
+<div class="regularText">Сам же ризик банкрутства і його лінгвістична оцінка 
+    безпосередньо випливає з попереднього викладу. Якщо зіставити лінгвістичні 
+    змінні «Рівень фактора F0» і «Ступінь ризику банкрутства підприємства», то 
+    можна встановити взаємно однозначну відповідність виду табл. 2:
+</div>
+<p class="right">
+    <span>
+        Таблиця 2.
+    </span>
+</p>
+<div class = "pictures">
+	<img src="img/method/table2.png" width="597px">
+</div>
+<div class="regularText">
+    При цьому лінгвістична змінна «Ступінь ризику банкрутства підприємства» 
+    також може бути описана стандартним п'ятирівневим 01-класифікатором виду 
+    рис. 1, як і лінгвістична змінна «Рівень фактора».
+</div>
+<div class="regularText">
+    Приклад 1. (Застосування алгоритму)
+</div>
+<div class="regularText">Нехай підприємство оцінюється на ризик банкрутства за 
+    двома блокам факторів: F1 «Фінанси» та F2 «Управління» (табл. 3). При цьому
+    існує наступна система відношень переваг факторів:
+</div>
+<div class="right">
+    <span>
+        (1.20)
+    </span>
+</div>
+<div class="formula">
+    <span class="formulaCentr">
+        <img src="img/method/formula1.20.png">
+    </span>
+</div>
+<div class="regularText">
+    Визначити ступінь ризику банкрутства підприємства.
+</div>
+<p class="right">
+    <span>
+        Таблиця 3.
+    </span>
+</p>
+<div class = "pictures">
+	<img src="img/method/table3.png" width="597px">
+</div>
+<p class="pictureText">
+    Фактори та їх рівні («*» - треба визначити)
+</p>
+<div class="regularText">
+    <i>Розв’язок.</i> Результати розрахунків за формулами наведено в табл. 4 
+    (в дужках поряд з рівнем фактора стоїть ступінь подібності з еталонною 
+    функцією розподілу). Видно, що, незважаючи на середній рівень управління 
+    підприємством, стан підприємства розпізнається як низький (інші фактори в 
+    оцінці фінансового стану «перетягують» управління до низької оцінки). Але,
+    так чи інакше, поява в результатах низьких оцінок повинно наштовхувати
+    менеджмент підприємства до певних висновків (інакше навіщо взагалі аналіз).
+</div>
+<p class="right">
+    <span>
+        Таблиця 4.
+    </span></p>
+<div class = "pictures">
+	<img src="img/method/table4.png" width="597px">
+</div>
+<p class="pictureText">
+    <b>Результати розрахунків</b>
+</p>
+<div class="regularText">
+    Відповідно, ступінь ризику банкрутства підприємства оцінюється як
+    <b>небезпечна</b> (табл. 2).
+</div>
